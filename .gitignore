@@ -33,4 +33,5 @@ ios/Pods/
 coverage/
 web-build/
 .DS_Store
-.idea/ 
+.idea/
+shopping-list.code-workspace
