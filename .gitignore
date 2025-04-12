@@ -1,0 +1,36 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Expo
+.expo/
+dist/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Environment variables
+.env
+.env.*
+
+# Build artifacts (Android)
+android/app/build/
+android/.gradle/
+android/gradle.properties
+android/local.properties
+android/app/src/main/assets/app.manifest
+
+# Build artifacts (iOS)
+ios/build/
+ios/Pods/
+
+# Other
+*.log
+coverage/
+web-build/
+.DS_Store
+.idea/ 
