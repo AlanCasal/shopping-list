@@ -5,10 +5,11 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { ClerkLoaded, ClerkProvider } from '@clerk/clerk-expo';
-import 'react-native-reanimated';
-
 import { useColorScheme } from '@hooks/useColorScheme';
 import { tokenCache } from 'cache';
+
+import 'react-native-reanimated';
+import '../global.css';
 
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
 
