@@ -1,8 +1,4 @@
-import {
-	DarkTheme,
-	DefaultTheme,
-	ThemeProvider,
-} from '@react-navigation/native';
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Slot } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -12,15 +8,11 @@ import { ClerkLoaded, ClerkProvider } from '@clerk/clerk-expo';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@hooks/useColorScheme';
+import { tokenCache } from 'cache';
 
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
 
-if (!publishableKey) {
-	console.log(
-		'\x1b[33m\x1b[41m\x1b[1m[ERROR]\x1b[0m',
-		'Missing Publishable Clerk Key'
-	);
-}
+if (!publishableKey) console.log('\x1b[33m\x1b[41m\x1b[1m[ERROR]\x1b[0m', 'Missing Publishable Clerk Key');
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -40,12 +32,10 @@ export default function RootLayout() {
 	return (
 		<ClerkProvider
 			publishableKey={publishableKey}
-			tokenCache={undefined}
+			tokenCache={tokenCache}
 		>
 			<ClerkLoaded>
-				<ThemeProvider
-					value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
-				>
+				<ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
 					<StatusBar style='auto' />
 					<Slot />
 				</ThemeProvider>
