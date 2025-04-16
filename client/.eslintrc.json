@@ -50,7 +50,7 @@
 		"@typescript-eslint/no-empty-function": "warn",
 		"@typescript-eslint/no-explicit-any": "warn",
 		"@typescript-eslint/no-unused-vars": "warn",
-		"@typescript-eslint/no-use-before-define": "warn",
+		"@typescript-eslint/no-use-before-define": "off",
 		"import/no-named-as-default": "off",
 		"import/prefer-default-export": "off",
 		"no-console": "warn",
@@ -93,10 +93,7 @@
 		"@typescript-eslint/no-unused-expressions": "off",
 		"react/react-in-jsx-scope": "off",
 		"react/jsx-uses-react": "off",
-		"react/jsx-max-props-per-line": [
-			"error",
-			{ "maximum": 1, "when": "always" }
-		],
+		"react/jsx-max-props-per-line": ["error", { "maximum": 1, "when": "always" }],
 		"jsx-quotes": ["error", "prefer-single"]
 	},
 	"ignorePatterns": ["todos.js", "metro.config.js", "babel.config.js"]
